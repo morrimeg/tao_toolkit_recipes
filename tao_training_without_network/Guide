@@ -20,6 +20,8 @@ $ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mcr.microsoft
 
 # pip3 install nvidia-tao
 
+# pip3 install jupyter-lab
+
 # curl -sSL https://get.docker.com/ | sh
 
 # docker login --username=\$oauthtoken --password="your_ngc_key"  nvcr.io
@@ -52,7 +54,7 @@ $ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock mcr.microsoft
 
 
 
-Run below command to pull 4 kinds of tao dockers.
+Run below command to pull 5 kinds of tao dockers.
 
 # docker pull nvcr.io/nvidia/tao/tao-toolkit-tf:v3.21.11-tf1.15.4-py3
 
@@ -61,6 +63,8 @@ Run below command to pull 4 kinds of tao dockers.
 # docker pull nvcr.io/nvidia/tao/tao-toolkit-pyt:v3.21.11-py3
 
 # docker pull nvidia/tao/tao-toolkit-lm:v3.21.08-py3
+
+# docker pull nvcr.io/nvidia/tensorrt:22.01-py
 
 
 
@@ -88,6 +92,8 @@ $  docker save -o tao-toolkit-pyt-v3.21.11-py3.tar.gz  nvcr.io/nvidia/tao/tao-to
 
 $  docker save -o tao-toolkit-lm-v3.21.08-py3.tar.gz   nvcr.io/nvidia/tao/tao-toolkit-lm:v3.21.08-py3
 
+$  docker save -o tensorrt-v22.01-py3.tar.gz nvcr.io/nvidia/tensorrt:22.01-py
+
 
 
 
@@ -103,6 +109,8 @@ $ docker load -i tao-toolkit-tf-v3.21.11-tf1.15.5-py3.tar.gz
 $ docker load -i tao-toolkit-pyt-v3.21.11-py3.tar.gz
 
 $ docker load -i tao-toolkit-lm-v3.21.08-py3.tar.gz
+
+$ docker load -i tensorrt-v22.01-py3.tar.gz
 
 
 Copy the training dataset into below path of the 2nd machine. If the path is not available, please generate the same as the 1st machine.
